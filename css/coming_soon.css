@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle, #7b4397, #dc2430);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.title:hover {
+  color: #dc2430;
+  transform: scale(1.1);
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.countdown {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.cta {
+  margin-bottom: 1em;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="email"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+button[type="submit"] {
+  background: #FFF;
+  color: #7b4397;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #f0f0f0;
+}
+
+#cursor {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+footer {
+  position: relative;
+  /* set the height of the footer */
+  height: 120px;
+  /* set the position to absolute to stick it to the bottom of the wrapper */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.footer {
+  color: #666;
+  font-size: 40px;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 45%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+/* Code from https://codepen.io/alfaris/pen/ZWPgYm */
+
+.fa {
+  color: #E90606;
+  margin: 0 3px;
+  font-size: 10px;
+  animation: pound 0.35s infinite alternate;
+  -webkit-animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
